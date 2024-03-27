@@ -1,0 +1,53 @@
+:root {
+    --color1: #0455BF;
+    --color2: #2A6BBF;
+    --color3: #6BA5F2;
+    --color4: #94BDF2;
+}
+
+body {
+    background-color: var(--color3);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    width: 500px;
+    background-color: var(--color2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    margin: 0 auto;
+
+
+    h1 {
+        width: 100%;
+        border-bottom: 1px solid var(--color3);
+        text-align: center;
+    }
+
+    input {
+        background-color: var(--color4);
+        border: none;
+    }
+
+    .checkbox {
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+
+    .formButton {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+    }
+
+    .formButton>input {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 4px;
+       
+    }
+}

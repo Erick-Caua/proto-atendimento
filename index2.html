@@ -1,29 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="scripts/scripts2.js" defer></script>
     <title>Document</title>
 </head>
+
 <body>
-    <h1>Sistema de atendimento</h1>
+    <main>
+        <h1>Sistema de atendimento</h1>
+        <form class="meuForm">
+            <div>
+                <label for="pacienteC">Nome do Paciente:</label>
+                <input type="text" name="pacienteC" id="pacienteC" required>
+            </div>
+            <div class="checkbox">
 
-    <form class="meuForm">
-        <label for="pacienteC">Nome do Paciente:</label>
-        <input type="text" name="pacienteC" id="pacienteC" required>
-        <input type="checkbox" name="urgencia" id="urgencia">
-        <label for="urgencia">Urgencia</label>
-        <input type="submit" value="Novo Paciente">
-        <input type="button" value="Atender" id="atender">
-    </form>
+                <input type="checkbox" name="urgencia" id="urgencia">
+                <label for="urgencia">Urgencia</label>
 
-    
-    <h3>
-        Pacientes: <span class="emAtendimento"></span>
-    </h3>
-    <ol class="lista">
 
-    </ol>
+                <input type="checkbox" name="preferencial" id="preferencial">
+                <label for="preferencial">Preferencial</label>
+
+            </div>
+            <div class="formButton">
+                <input type="submit" value="Novo Paciente">
+                <input type="button" value="Atender" id="atender">
+            </div>
+        </form>
+        <h2>
+            Paciente em atendimento: <span class="emAtendimento"></span>
+        </h2>
+        <h3>Pacientes em espera:</h3>
+        <ul class="lista-urgencia">
+        </ul>
+        <ul class="lista-preferencial">
+        </ul>
+        <ul class="lista">
+        </ul>
+    </main>
 </body>
+
 </html>
