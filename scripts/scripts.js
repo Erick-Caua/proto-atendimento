@@ -5,10 +5,25 @@ const respLista = document.querySelector("pre");
 
 const pacientes = []  //declaração de array global <recepciona os valores que o push(no eventos) vai enviar >
 
+// function
+
+function excluirPrimeiroElemento(lista) {
+    if (lista.children.length > 0) {
+        var primeiroValor = lista.firstElementChild.textContent;
+        lista.removeChild(lista.firstElementChild);
+        return primeiroValor;
+    } else {
+        return null;
+    }
+}
+
+
+
+
 //eventos
 
 frm.addEventListener("submit", (e) => { //submit do formulario para envio do nome do paciente e acrescentar em lista
-    e.preventDefault();
+    e.preventDefault();// para não atualizar pagina!
     const nome = frm.inName.value;
     pacientes.push(nome);  //adiciona o valor do input para o final do array global pacientes[]
 
